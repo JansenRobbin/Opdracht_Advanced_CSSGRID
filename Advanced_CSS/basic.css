@@ -1,0 +1,124 @@
+/* styles css sheet (Scrimba)*/
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 200px 40px;
+  grid-template-areas: 
+  "h h h h h h h h h h h h"
+  "m m m m m m m m m m m m"
+  "w w w w w w w w w w w w"
+  "f f f f f f f f f f f f";
+}
+
+.site-header {
+  grid-area: h;
+}
+
+.site-main {
+  grid-area: m;
+}
+
+.widget-area {
+  grid-area: w;
+}
+
+.site-footer {
+  grid-area: f;
+}
+
+/* basic css sheet (Scrimba) */
+
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html, body {
+  box-sizing: border-box;
+  background-color: #ffeead;
+  height: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container > div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container > div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
+
+
+
+
+@media (max-width: 2500px) {
+  html, body{
+      background-color: rgb(0, 0, 0);
+      color: rgb(32, 24, 24);
+      }
+  .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 4px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px auto 40px;
+        grid-template-areas: 
+        "h m m m m m m m m m m w"
+        "h m m m m m m m m m m w"
+        "h f f f f f f f f f f w";
+      }
+}
+
+@media (max-width: 1024px) {
+  html, body{
+      background-color: rgb(255, 0, 0);
+      color: rgb(32, 24, 24);
+      }
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 80px auto 80px;
+      grid-template-areas: 
+        "h h h h h h h h h h h w"
+        "m m m m m m m m m m m w"
+        "f f f f f f f f f f f w";
+      }
+      
+}
+
+@media (max-width: 600px) {
+  html, body{
+      background-color: darkgray;
+      color: rgb(32, 24, 24);
+      }
+  .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 6px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px auto 200px 40px;
+        grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "w w w w w w w w w w w w"
+        "f f f f f f f f f f f f";
+      }
+}
